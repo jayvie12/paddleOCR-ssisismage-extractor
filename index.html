@@ -1,5 +1,30 @@
-<script src="https://cdn.jsdelivr.net/npm/@paddlejs/paddlejs-core@latest/dist/index.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@paddlejs/paddlejs-backend-webgl@latest/dist/index.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@paddle-js-models/ocr@latest/lib/index.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile AI Tabulator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@paddlejs/paddlejs-core@latest/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@paddlejs/paddlejs-backend-webgl@latest/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@paddle-js-models/ocr@latest/lib/index.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Local AI Tabulator</h2>
+        <p id="sub-header">Initializing engine...</p>
+        
+        <div id="loader-spinner" class="spinner"></div>
 
-<script src="script.js"></script>
+        <div id="main-ui" style="display:none;">
+            <input type="file" id="imageInput" multiple accept="image/*" hidden>
+            <label for="imageInput" class="upload-btn">Select up to 100 Images</label>
+            
+            <div id="status">AI Ready!</div>
+            <button id="downloadBtn" style="display:none;">Download CSV</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
