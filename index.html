@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private OCR Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Local AI Tabulator</h2>
+        <p>All processing happens on this device.</p>
+        
+        <input type="file" id="imageInput" multiple accept="image/*" hidden>
+        <label for="imageInput" class="upload-btn">Select up to 100 Images</label>
+        
+        <div id="status">Waiting for input...</div>
+        <button id="downloadBtn" style="display:none;">Download CSV</button>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
