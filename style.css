@@ -1,0 +1,126 @@
+/* Base Mobile-First Styles */
+:root {
+    --primary-blue: #4285f4;
+    --success-green: #34a853;
+    --bg-dark: #121212;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --text-main: #ffffff;
+    --text-dim: #b0b0b0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Glassmorphism Container */
+.container {
+    width: 100%;
+    max-width: 450px;
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+p {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+/* Hidden File Input Logic */
+input[type="file"] {
+    display: none;
+}
+
+/* High-Visibility Buttons */
+.upload-btn {
+    display: block;
+    background: var(--primary-blue);
+    color: white;
+    padding: 18px 24px;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+    box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
+}
+
+.upload-btn:active {
+    transform: scale(0.96);
+    background: #3367d6;
+}
+
+#downloadBtn {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    background: var(--success-green);
+    color: white;
+    padding: 18px 24px;
+    border: none;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(52, 168, 83, 0.3);
+}
+
+/* Status & Feedback */
+#status {
+    margin-top: 25px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+/* Loading Animation for "Smart Processing" */
+.processing {
+    color: var(--primary-blue);
+    font-weight: bold;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 380px) {
+    .container {
+        padding: 20px;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+}
